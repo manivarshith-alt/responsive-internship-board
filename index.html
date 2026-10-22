@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Internship Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Internship Opportunities</h1>
+        <p>Find your next role</p>
+    </header>
+
+    <main>
+        <!-- Search and Filter Section -->
+        <section id="controls">
+            <div>
+                <label for="search-input">Search Internships</label>
+                <input type="search" id="search-input" placeholder="Search by title or skill...">
+            </div>
+
+            <div>
+                <label for="domain-filter">Filter by Domain</label>
+                <select id="domain-filter">
+                    <option value="">All Domains</option>
+                    <option value="Full Stack Development">Full Stack Development</option>
+                    <option value="UI/UX">UI/UX</option>
+                    <option value="Data Analytics">Data Analytics</option>
+                    <option value="Cyber Security">Cyber Security</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Internship Cards Container -->
+        <section id="internship-list" class="grid-container">
+            <!-- Cards will be dynamically injected here via JavaScript -->
+        </section>
+
+        <!-- Empty State (Hidden by default) -->
+        <div id="empty-state" class="state-message" hidden>
+            <p>No internships found matching your criteria.</p>
+        </div>
+
+        <!-- Error State (Hidden by default) -->
+        <div id="error-state" class="state-message" hidden>
+            <p>Failed to load internship data. Please try again later.</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
